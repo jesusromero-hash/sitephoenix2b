@@ -175,6 +175,11 @@ section h2{
     gap:25px;
 }
 
+.members a{
+    text-decoration: none;
+    color:white
+}
+
 .member{
     background:#111;
     padding:15px;
@@ -201,25 +206,117 @@ html{
     scroll-behavior:smooth;
 }
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-.hero{
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:55px;
+    }
+
+    .info{
+        grid-template-columns:1fr;
+        padding:30px;
+    }
+
+    .line{
+        flex-wrap:wrap;
+        gap:30px;
+    }
+}
+
+/*---ESTILIZAÇÃO PÁGINA DOS MEMBROS---*/
+main{
+    max-width:1200px;
+    margin:120px auto 60px;
+    padding: 0 30px;
+    display:grid;
+    grid-template-columns:380px 1fr;
+    gap:35px;
+    align-items:start;
+}
+
+.perfil{
+    display:flex;
     flex-direction:column;
-    text-align:center;
+    gap:12px;
 }
 
-.hero-text h1{
-    font-size:55px;
+.foto{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:15px;
+    border:2px solid #ff5a00;
+    box-shadow:0 0 25px rgba(255,69,0,.25);
+}
+/*---Nome---*/
+.perfil h1{
+    margin:18px 0 5px;
+    font-size:2rem;
+    color:white;
+}
+/*---Link Github---*/
+.perfil a{
+    color:#d4d4d4;
+    text-decoration:none;
+    font-size:1.3rem;
 }
 
-.info{
-    grid-template-columns:1fr;
+/*---Função---*/
+.perfil p{
+    margin-top:15px;
+    color:#bdbdbd;
+    font-size:1.2rem;
+}
+
+/*---Muda cor do link---*/
+.perfil a:hover{
+    color:#151c47;
+}
+
+/*---Divisões---*/
+.sobre,
+.projetos{
+    background:#111;
+    border:1px solid #222;
+    border-radius:10px;
+    padding:25px;
+}
+
+.conteudo{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.sobre h2,
+.projetos h2{
+    color:white;
+}
+
+.sobre ul {
+    padding-left: 20px;
+}
+
+.sobre li{
+    color:#d4d4d4;
+}
+
+.projetos a{
+    color:#3ea6ff;
+    text-decoration:none;
+}
+
+/*---RODAPÉ---*/
+footer{
+    margin-top:60px;
     padding:30px;
-}
-
-.line{
-    flex-wrap:wrap;
-    gap:30px;
-}
-
+    border-top:1px solid #222;
+    color:#9d9d9d;
+    font-size:.9rem;
+    text-align: center;
 }
