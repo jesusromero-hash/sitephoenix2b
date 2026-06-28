@@ -233,19 +233,20 @@ html{
 main{
     max-width:1200px;
     margin:100px auto 60px;
-    padding: 0 30px;
     display:grid;
     grid-template-columns:380px 1fr;
     gap:35px;
     align-items:start;
 }
 
+/*---Contâiner do perfil---*/
 .perfil{
     display:flex;
     flex-direction:column;
     gap:12px;
 }
 
+/*Foto do integrante da equipe*/
 .foto{
     width:100%;
     height:400px;
@@ -254,12 +255,14 @@ main{
     border:2px solid #ff5a00;
     box-shadow:0 0 25px rgba(255,69,0,.25);
 }
+
 /*---Nome---*/
 .perfil h1{
     margin:18px 0 5px;
     font-size:2rem;
     color:white;
 }
+
 /*---Link Github---*/
 .perfil a{
     color:#d4d4d4;
@@ -279,19 +282,20 @@ main{
     color:#ff4500;
 }
 
+/*---Define o tamanho da logo do Github---*/
 .texto-logo img {
     height: 50px;
     width: auto;
 }
 
+/*---Alinha logo e link---*/
 .texto-logo {
     display: flex;
-    width: 30px;
-    margin-right: 20px;
     align-items: center;
+    gap: 7px;
 }
 
-/*---Divisões---*/
+/*---Cards---*/
 .sobre,
 .projetos{
     background:#111;
@@ -299,15 +303,6 @@ main{
     border-radius:10px;
     padding:25px;
     transition:.3s;
-}
-
-.sobre:hover,
-.projetos:hover{
-    border-color:#ff4500;
-    transform:translateY(-4px);
-}
-
-.conteudo{
     display:flex;
     flex-direction:column;
     gap:25px;
@@ -317,38 +312,29 @@ main{
 .sobre h2,
 .projetos h2{
     color:white;
+    margin:0px;
 }
 
-.sobre ul {
+.sobre ul,
+.projetos ul {
     padding-left: 20px;
     list-style-type: none;
-}
-
-.sobre li{
     color:#d4d4d4;
 }
 
-.projetos a{
-    color:#3ea6ff;
-    text-decoration:none;
+/*---Hover simples---*/
+.sobre:hover,
+.projetos:hover{
+    border-color:#ff4500;
+    transform:translateY(-4px);
 }
 
 /*---RODAPÉ---*/
 footer{
     margin-top:70px;
-    display:flex;
     padding:40px 60px;
-    justify-content:space-between;
-    align-items: center;
     border-top:1px solid #161616;
-    color:#9d9d9d;
-    font-size:.8rem;
-    gap: 50px;
-}
-
-footer p{
     font-size: .85rem;
-    max-width: 700px;
     line-height: 1.8;
     color:#9d9d9d
 }
