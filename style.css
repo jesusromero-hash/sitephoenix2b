@@ -1,3 +1,5 @@
+/*---ESTILIZAÇÃO DA PÁGINA INICIAL*---/
+/*Remove margens e espaçamentos padrões do navegador*/
 *{
     margin:0;
     padding:0;
@@ -5,11 +7,13 @@
     font-family:'Poppins',sans-serif;
 }
 
+/*Define a cor de fundo e texto para todo o site*/
 body{
     background:#000;
     color:white;
 }
 
+/*---MENU---*/
 header{
     position:fixed;
     top:0;
@@ -34,6 +38,7 @@ nav a:hover{
     color:#ff4500;
 }
 
+/*---BANNER---*/
 .hero{
     min-height:100vh;
     display:flex;
@@ -42,7 +47,7 @@ nav a:hover{
     padding:100px 10%;
     background:radial-gradient(circle,#600000,#000);
 }
-
+/*---Texto do banner---*/
 .hero-text span{
     color:#ff4500;
     font-size:30px;
@@ -61,6 +66,7 @@ nav a:hover{
     max-width:100%;
 }
 
+/*---SOBRE A EQUIPE---*/
 .info{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -82,6 +88,7 @@ section h2{
     margin-bottom:30px;
 }
 
+/*---CARDS DOS PROJETOS---*/
 .cards{
     display:flex;
     justify-content:center;
@@ -119,6 +126,7 @@ section h2{
     padding:20px;
 }
 
+/*---TECNOLOGIAS UTILIZADAS---*/
 .tech-list{
     display:flex;
     justify-content:center;
@@ -132,6 +140,7 @@ section h2{
     border-radius:30px;
 }
 
+/*---LINHA DO TEMPO---*/
 .timeline{
     text-align:center;
 }
@@ -170,6 +179,7 @@ section h2{
     margin:auto;
 }
 
+/*---INTEGRANTES---*/
 .members{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -248,7 +258,7 @@ main{
 
 /*Foto do integrante da equipe*/
 .foto{
-    width:100%;
+    width:auto;
     height:400px;
     object-fit:cover;
     border-radius:15px;
@@ -271,7 +281,7 @@ main{
 }
 
 /*---Função---*/
-.perfil p{
+.cargo{
     margin-top:5px;
     color:#bdbdbd;
     font-size:1.2rem;
@@ -301,7 +311,7 @@ main{
     background:#111;
     border:1px solid #222;
     border-radius:10px;
-    padding:25px;
+    padding:35px;
     transition:.3s;
     display:flex;
     flex-direction:column;
@@ -322,7 +332,30 @@ main{
     color:#d4d4d4;
 }
 
+.bruno{
+    width:150px;
+    height:auto;
+    image-rendering:pixelated;
+}
+
+.download{
+    display:block;
+    width:fit-content;
+    margin:15px auto 0;
+    padding:12px 22px;
+    background:#ff4500;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
 /*---Hover simples---*/
+.download:hover{
+    background:#ff6a2b;
+    transform:translateY(-2px);
+}
+
 .sobre:hover,
 .projetos:hover{
     border-color:#ff4500;
@@ -339,40 +372,33 @@ footer{
     color:#9d9d9d
 }
 
-@media(max-width:900px){
+@media(max-width:768px){
 
     main{
-
         grid-template-columns:1fr;
-
     }
 
     .conteudo{
-
         margin-top:0;
-
     }
 
     .perfil{
-
         align-items:center;
-
         text-align:center;
+    }
 
+    .projetos{
+        align-items:center;
+        text-align:center;
     }
 
     .foto{
-
         max-width:320px;
-
     }
 
     footer{
-
         flex-direction:column;
-
         text-align:center;
-
     }
 
 }
