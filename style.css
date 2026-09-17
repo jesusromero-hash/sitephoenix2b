@@ -165,6 +165,7 @@ section h2{
 
 .step{
     z-index:2;
+    cursor:pointer;
 }
 
 .circle{
